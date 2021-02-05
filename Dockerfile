@@ -5,4 +5,5 @@ WORKDIR /app
 COPY ./requirements.txt /var/www/requirements.txt
 RUN pip install -r /var/www/requirements.txt
 ENTRYPOINT ["python3"]
-CMD ["test.py"]
+EXPOSE 5000
+CMD ["app.py"]
